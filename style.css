@@ -4,6 +4,14 @@ div {
   padding: 10px;
 }
 
+#form-modal {
+
+}
+
+.template {
+  display: none;
+}
+
 input {
   box-shadow: 3px 3px 5px lightblue;
   border-radius: 15px;
@@ -14,6 +22,7 @@ input {
 }
 .media{
   box-shadow: 6px 6px 5px grey;
+  height: 30px;
 }
 
 .fa-plus-circle {

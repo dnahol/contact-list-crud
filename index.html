@@ -29,124 +29,36 @@
 </head>
 <body>
 
-<div class="add-bar black tool-height col-xs-12"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+<!-- This is the add-bar. it contains a font awesome button to bring up a modal to add a contact -->
+<div class="add-bar black tool-height col-xs-12"><a href data-toggle="modal" data-target="#form-modal"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></a>
 </div>
 <br>
 
-
+<!-- bootstrap container for responsive columns in template (see template at end of doc) -->
 <div class="container">
   <div class="row contacts">
-    <!-- Media Object cols-->
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
 
 
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
+    <!-- This is my template. I will clone this and add this dynamically each time I
+    create a new contact -->
+    <div class="media red std-height col-xs-12 col-md-6 col-lg-3 template">
+      <h4 class="media-heading name">Their Name</h4>
+      <button class="del">del</button><button class="edit">edit</button>
       <a class="media-left" href="#">
         <img class="media-object" data-src="..." alt="Generic placeholder image">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
+        lorem ipsum
       </div>
     </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>
-    <div class="media red std-height col-xs-12 col-md-6 col-lg-3">
-      <a class="media-left" href="#">
-        <img class="media-object" data-src="..." alt="Generic placeholder image">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        Cras sit amet nibh libero, in gravida nulla. Nulla.
-      </div>
-    </div>  <!-- End of Media Object cols-->
+    <!--This is end of template -->
 
-
-    <!-- Original empty cols for reference -->
-    <!-- <div class="red std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="green std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="blue std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="green std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="blue std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="red std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="blue std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="red std-height col-xs-12 col-md-6 col-lg-3"></div>
-    <div class="green std-height col-xs-12 col-md-6 col-lg-3"></div> -->
 
   </div><!-- End of row -->
 </div><!-- End of container -->
 
 <!--This is the form -->
-<form class="form" id="contactForm">
+<!-- <form class="form" id="contactForm">
   First name:<br>
   <input type="text" id="firstname" name="firstname">
   <br>
@@ -165,9 +77,96 @@
   Image:<br>
   <input type="text" id="image" name="image">
   <br>
-</form><!-- form end -->
+</form> -->
+<!-- form end -->
 
-<button class="form" id="btn-id">Submit</button>
+
+
+<!-- this is the add contact modal -->
+<div class="modal fade" id='form-modal' tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <!--This is the form -->
+        <form class="form" id="contactForm">
+          First name:<br>
+          <input type="text" id="firstname" name="firstname">
+          <br>
+          Last name:<br>
+          <input type="text" id="lastname" name="lastname">
+          <br>
+          Phone Number:<br>
+          <input type="text" id="phonenumber" name="phonenumber">
+          <br>
+          Address:<br>
+          <input type="text" id="address" name="address">
+          <br>
+          Email:<br>
+          <input type="text" id="email" name="email">
+          <br>
+          Image:<br>
+          <input type="text" id="image" name="image">
+          <br>
+        </form><!-- form end -->
+
+        <button class="form" id="btn-id">Submit</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal --> <!-- end of add contact modal  -->
+
+
+
+<!-- this is the edit contact modal -->
+<div class="edit modal fade" id='form-modal' tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <!--This is the form -->
+        <form class="form" id="newContactForm">
+          First name:<br>
+          <input type="text" id="newFirstname" name="firstname">
+          <br>
+          Last name:<br>
+          <input type="text" id="newLastname" name="lastname">
+          <br>
+          Phone Number:<br>
+          <input type="text" id="newPhonenumber" name="phonenumber">
+          <br>
+          Address:<br>
+          <input type="text" id="newAddress" name="address">
+          <br>
+          Email:<br>
+          <input type="text" id="newEmail" name="email"
+          <br>
+          Image:<br>
+          <input type="text" id="newImage" name="image">
+          <br>
+        </form><!-- form end -->
+
+        <button class="save form" id="btn-id">Submit</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal --> <!-- end of edit contact modal  -->
+
+
 
 
 
